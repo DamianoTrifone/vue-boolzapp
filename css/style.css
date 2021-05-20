@@ -50,9 +50,72 @@
     font-weight: bold;
 }
 
+.utente_proprietario i{
+    float: right;
+    padding: 7px;
+    margin-top: 14px;
+    margin-left: 2px;
+    font-size: 17px;
+    color: #B1B1B1;
+}
+
 .notifiche{
     background-color: #8EDAFC;
     height: 68px;
+}
+
+.notifiche i{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top: 12px;
+    background-color: white;
+    color: #8EDAFC;
+    padding: 10px;
+    border-radius: 48%;
+    float: left;
+}
+
+.notifiche h4{
+    float: left;
+    font-size: 13px;
+    margin-top: 16px;
+    margin-left: 5px;
+}
+
+.notifiche p{
+    font-size: 10px;
+    float: left;
+    margin-top: 1px;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.cerca_chat{
+    background-color: #FAFAFA;
+    height: 40px;
+}
+
+.cerca_chat i{
+    border: 1px solid lightgray;
+    padding: 5px 15px;
+    margin-top: 5px;
+    margin-left: 8px;
+    float: left;
+    font-size: 13px;
+    color: grey;
+}
+
+.cerca_chat input{
+    width: 280px;
+    float: left;
+    margin-top: 5px;
+    border: 1px solid lightgray;
+    padding: 3px;
+}
+
+.lista_contatti{
+    background-color: white;
+    height: 487px;
 }
 
 
