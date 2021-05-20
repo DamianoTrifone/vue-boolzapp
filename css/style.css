@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .container{
@@ -30,6 +31,23 @@
 .utente_proprietario{
     background-color: #EAEAEA;
     height: 55px;
+    position: relative;
+}
+
+.utente_proprietario img{
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+.utente_proprietario h2{
+    display: inline-block;
+    font-size: 13px;
+    position: absolute;
+    top: 20px;
+    margin-left: 5px;
+    font-weight: bold;
 }
 
 .notifiche{
