@@ -63,11 +63,15 @@
                                             <div id="conversazione" v-for="message in contacts[activeIndex].messages">
                                                 <div
                                                 :class="(message.status == 'sent') ? 'text text_sent': 'text text_received'">
-                                                    <p>{{message.text}}</p>
-                                                    <h5>{{message.date}}</h5>
+                                                    <h5>{{message.text}}</h5>
+                                                    <p>{{message.date}}</p>
                                     </div>
-                    
                             </div>
+                        </div>
+                        <div class="inserimento">
+                            <i class="far fa-smile"></i>
+                            <input type="text" placeholder="Scrivi un messaggio">
+                            <i class="fas fa-microphone"></i>
                         </div>
                 
                     </div> 
