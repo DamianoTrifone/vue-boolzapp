@@ -166,12 +166,25 @@
     background-color: #EAEAEA;
     height: 55px;
     border-left: 1px solid lightgray;
+    position: relative;
+}
+
+.contatto h2{
+    font-size: 17px;
+}
+
+.contatto i{
+    float: right;
+    font-size: 18px;
+    padding: 8px;
+    position: relative;
+    top: -18px;
+    color:#B1B1B1;
 }
 
 .chat{
     background-image: url(../img/mine.jpg);
     height: 540px;
-    display: flex;
 }
 
 .testo_msg{
@@ -181,7 +194,19 @@
 }
 
 .text_sent{
-    color: red;
-    align-self: flex-end;
+    color: black;
+    background-color: #D5F9BA;
+    width: 300px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;   
 }
 
+.text_received{
+    color: black;
+    background-color: white;
+    width: 300px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
