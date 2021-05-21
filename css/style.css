@@ -116,8 +116,51 @@
 .lista_contatti{
     background-color: white;
     height: 487px;
+    display: flex;
+    flex-direction: column;
 }
 
+.lista_contatti img{
+    width: 44px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-left: 15px;
+    float: left;
+    padding: 5px;
+}
+
+.testo{
+    border-bottom: 1px solid lightgray;
+    padding: 3px;
+}
+
+.testo h2{
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.testo p{
+    display: flex;
+    font-size: 12px;
+    color: grey;
+}
+/* 
+.lista_contatti h4{
+    float: left;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.lista_contatti p{
+    float: left;
+    font-size: 12px;
+    margin-top: 30px;
+    margin-right: 50px;
+} */
 
 .colonna_dx{
     width: calc(100% - 350px);
@@ -133,7 +176,7 @@
 }
 
 .chat{
-    background-image: url(../css/img/mine.jpg);
+    background-image: url(../img/mine.jpg);
     height: 540px;
 }
 

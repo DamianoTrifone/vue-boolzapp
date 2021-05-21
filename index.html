@@ -13,50 +13,57 @@
     </head>
     <body>
         <!-- Contenitore generale -->
-        <div class="container">
-            <div class="schermata">
-                <div class="colonna_sx">
-                    <div class="utente_proprietario">
-                        <img src="css/img/avatar_1.jpg" alt="Profilo proprietario">
-                        <h2>Damiano Trifone</h2>
-                        <i class="fas fa-ellipsis-v"></i>
-                        <i class="fas fa-comment-alt"></i>
-                        <i class="fas fa-circle-notch"></i>
+        <div id="root">
+            <div class="container">
+                <div class="schermata">
+                    <div class="colonna_sx">
+                        <div class="utente_proprietario">
+                            <img src="img/avatar_1.jpg" alt="Profilo proprietario">
+                            <h2>Damiano Trifone</h2>
+                            <i class="fas fa-ellipsis-v"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-circle-notch"></i>
+                        </div>
+
+                        <div class="notifiche">
+                            <i class="fas fa-bell-slash"></i>
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            <p>Attiva notifiche desktop</p>
+                        </div>
+
+                        <div class="cerca_chat">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+
+                        <div class="lista_contatti">
+                            <div v-for="(contact, index) in contacts" class="contact">
+                                <img :src="img_profilo(index)" class="avatar">
+                                <div class="testo">
+                                    <h2>{{contact.name}}</h2>
+                                    <p>{{ ultimoMessaggio(contact).text }}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="notifiche">
-                        <i class="fas fa-bell-slash"></i>
-                        <h4>Ricevi notifiche di nuovi messaggi</h4>
-                        <p>Attiva notifiche desktop</p>
-                    </div>
+                    <div class="colonna_dx">
+                        <div class="contatto">
 
-                    <div class="cerca_chat">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
-                    </div>
+                        </div>
 
-                    <div class="lista_contatti">
+                        <div class="chat">
 
+                        </div>
+
+                        <div class="testo_msg">
+
+                        </div>
                     </div>
                 </div>
 
-                <div class="colonna_dx">
-                    <div class="contatto">
-
-                    </div>
-
-                    <div class="chat">
-
-                    </div>
-
-                    <div class="testo_msg">
-
-                    </div>
-                </div>
             </div>
-
-        </div>
-        
+        </div>    
         <script src="js/script.js"></script>
     </body>
 </html>
