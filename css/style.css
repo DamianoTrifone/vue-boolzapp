@@ -147,20 +147,13 @@
     font-size: 12px;
     color: grey;
 }
-/* 
-.lista_contatti h4{
-    float: left;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-left: 15px;
-}
 
-.lista_contatti p{
-    float: left;
-    font-size: 12px;
-    margin-top: 30px;
-    margin-right: 50px;
-} */
+.testo span{
+    display: flex;
+    justify-content: flex-end;
+    color: gray;   
+    font-size: 10px; 
+}
 
 .colonna_dx{
     width: calc(100% - 350px);
