@@ -37,10 +37,10 @@
                         </div>
 
                         <div class="lista_contatti">
-                            <div v-for="(contact, index) in contacts" class="contact">
+                            <div v-for="(contact, index) in contacts" class="contact" :class="active">
                                 <img :src="img_profilo(index)" class="avatar">
                                 <div class="testo">
-                                    <h2>{{contact.name}}</h2>
+                                    <h2 @click="setActiveIndex(index)">{{contact.name}}</h2>
                                     <p>{{ ultimoMessaggio(contact).text }}</p>
                                     <span>{{ ultimoMessaggio(contact).date }}</span>
                                 </div>
@@ -48,23 +48,27 @@
                         </div>
                     </div>
 
-                    <div class="colonna_dx">
-                        <div class="contatto">
 
-                        </div>
+                         <div class="contact" :class="active">
 
-                        <div class="chat">
+                            <div class="colonna_dx">
+                                <div class="contatto">
+                                    <h2> {{ contacts[activeIndex].name  }} </h2>
+                                </div>
 
-                        </div>
+                                <div class="chat">
 
-                        <div class="testo_msg">
+                                    <div class="testo_msg" v-for="message in contacts[activeIndex].messages">
+                                        {{message.text}}
+                                    </div>
 
-                        </div>
-                    </div>
-                </div>
-
+                                </div>
+                            </div>
+                
+                    </div> 
             </div>
-        </div>    
+        </div> 
+        </div>   
         <script src="js/script.js"></script>
     </body>
 </html>
