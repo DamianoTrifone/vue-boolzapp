@@ -11,7 +11,7 @@ var app = new Vue({
     
     el: "#root",
     data: {
-        messages: 'ddd',
+        messages: '',
         contacts: [
             {
                 name: 'Michele',

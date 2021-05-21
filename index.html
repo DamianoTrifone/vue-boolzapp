@@ -52,18 +52,19 @@
                          <div class="contact" :class="active">
 
                             <div class="colonna_dx">
-                                <div class="contatto">
-                                    <h2> {{ contacts[activeIndex].name  }} </h2>
-                                </div>
-
-                                <div class="chat">
-
-                                    <div class="testo_msg" v-for="message in contacts[activeIndex].messages">
-                                        {{message.text}}
+                                    <div class="contatto">
+                                        <h2> {{ contacts[activeIndex].name  }} </h2>
                                     </div>
-
-                                </div>
+                                        <div class="chat">
+                                            <div id="conversation" v-for="message in contacts[activeIndex].messages">
+                                                <div
+                                                :class="(message.status == 'sent') ? 'text text_sent': 'text text_received'">
+                                                    <p>{{message.text}}</p>
+                                                    <h5>{{message.date}}</h5>
+                                     </div>
+                    
                             </div>
+                        </div>
                 
                     </div> 
             </div>

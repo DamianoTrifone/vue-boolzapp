@@ -171,11 +171,17 @@
 .chat{
     background-image: url(../img/mine.jpg);
     height: 540px;
+    display: flex;
 }
 
 .testo_msg{
     height: 55px;
     background-color: #EAEAEA;
     background-image: url(../img/mine.jpg);
-
 }
+
+.text_sent{
+    color: red;
+    align-self: flex-end;
+}
+
