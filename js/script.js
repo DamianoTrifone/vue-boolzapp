@@ -111,6 +111,11 @@ var app = new Vue({
             return contact.messages[contact.messages.length-1];
         },
 
+        getLastMessageData: function (contactIndex) {
+            const lastMessageIndex = this.contacts[contactIndex].messages.length -1;
+            return this.contacts[contactIndex].messages[lastMessageIndex].date;
+        },
+
         setActiveIndex: function(index){
            console.log(index)
            this.activeIndex = index;

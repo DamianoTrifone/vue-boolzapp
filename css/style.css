@@ -172,6 +172,13 @@
 
 .contatto h2{
     font-size: 17px;
+    display: inline-block;
+}
+
+.contatto p{
+    display: inline-block;
+    font-size: 12px;
+    color: gray;
 }
 
 .contatto i{
@@ -181,6 +188,12 @@
     position: relative;
     top: -28px;
     color:#B1B1B1;
+    margin-top: 50px;
+}
+
+.contatto img{
+    width: 44px;
+    border-radius: 50%;
 }
 
 .chat p{

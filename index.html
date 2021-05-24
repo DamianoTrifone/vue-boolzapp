@@ -48,32 +48,35 @@
                         </div>
                     </div>
 
+<!-- 
+                         <div class="contact" :class="active"> -->
+                             <div class="colonna_dx">
+                                <div class="contatto">
+                                    <img :src="img_profilo(activeIndex)" class="avatar" alt="">
+                                    <h2> {{ contacts[activeIndex].name  }} </h2>
+                                    <p>Ultimo accesso effettuato: {{ ultimoMessaggio(contacts[activeIndex]).date }}</p>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fas fa-search"></i>
+                                </div> 
 
-                         <div class="contact" :class="active">
-
-                            <div class="colonna_dx">
-                                    <div class="contatto">
-                                        <img :src="img_profilo" alt="">
-                                        <h2> {{ contacts[activeIndex].name  }} </h2>
-                                        <i class="fas fa-ellipsis-v"></i>
-                                        <i class="fas fa-paperclip"></i>
-                                        <i class="fas fa-search"></i>
+                                    <div class="chat">
+                                        <div id="conversazione" v-for="message in contacts[activeIndex].messages">
+                                            <div
+                                            :class="(message.status == 'sent') ? 'text text_sent': 'text text_received'">
+                                                <h5>{{message.text}}</h5>
+                                                <p>{{message.date}}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                        <div class="chat">
-                                            <div id="conversazione" v-for="message in contacts[activeIndex].messages">
-                                                <div
-                                                :class="(message.status == 'sent') ? 'text text_sent': 'text text_received'">
-                                                    <h5>{{message.text}}</h5>
-                                                    <p>{{message.date}}</p>
-                                    </div>
+                                                            
+                                    <div class="inserimento">
+                                        <i class="far fa-smile"></i>
+                                        <input type="text" placeholder="Scrivi un messaggio">
+                                        <i class="fas fa-microphone"></i>
+                                    </div>             
+                                </div> 
                             </div>
-                        </div>
-                        <div class="inserimento">
-                            <i class="far fa-smile"></i>
-                            <input type="text" placeholder="Scrivi un messaggio">
-                            <i class="fas fa-microphone"></i>
-                        </div>
-                
                     </div> 
             </div>
         </div> 
