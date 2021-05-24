@@ -118,7 +118,6 @@ var app = new Vue({
 
         sendMessage: function() {
 
-
             if (this.userMessage.trim().length > 0) {
                 this.contacts[this.activeIndex].messages.push({
                     date: this.userData,
@@ -129,7 +128,7 @@ var app = new Vue({
                 setTimeout(() => {
                     this.contacts[this.activeIndex].messages.push({
                     date: this.userData,
-                    text:  randomText,
+                    text:  "ok",
                     status:  'received'
                 })
                 }, 1000); 
