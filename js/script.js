@@ -116,6 +116,28 @@ var app = new Vue({
             return this.contacts[contactIndex].messages[lastMessageIndex].date;
         },
 
+        sendMessage: function() {
+
+
+            if (this.userMessage.trim().length > 0) {
+                this.contacts[this.activeIndex].messages.push({
+                    date: this.userData,
+                    text:  this.userMessage,
+                    status:  'sent'
+                }),
+
+                setTimeout(() => {
+                    this.contacts[this.activeIndex].messages.push({
+                    date: this.userData,
+                    text:  randomText,
+                    status:  'received'
+                })
+                }, 1000); 
+            }
+            this.userMessage = "";
+            
+        },
+
         setActiveIndex: function(index){
            console.log(index)
            this.activeIndex = index;
