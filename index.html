@@ -34,11 +34,11 @@
 
                         <div class="cerca_chat" >
                             <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" @change="search">
                         </div>
 
                         <div class="lista_contatti">
-                            <div v-for="(contact, index) in contacts" class="contact" :class="(activeIndex == index) ? 'active' : '' ">
+                            <div v-for="(contact, index) in contacts" class="contact" :class="{ 'active': index == activeIndex, 'no_display': contact.visible == false }"  @click="setActiveIndex(index)">
                                 <img :src="img_profilo(index)" class="avatar">
                                 <div class="testo">
                                     <h2 @click="setActiveIndex(index)">{{contact.name}}</h2>

@@ -99,7 +99,8 @@ var app = new Vue({
         ],
         activeIndex: 0,
         active: false,
-        userMessage: ""
+        userMessage: "",
+        
     },
 
     methods: {
@@ -116,6 +117,18 @@ var app = new Vue({
             const lastMessageIndex = this.contacts[contactIndex].messages.length -1;
             return this.contacts[contactIndex].messages[lastMessageIndex].date;
         },
+
+         search: function(event) {
+             const searchInput = event.target.value;
+             return this.contacts.map(contact => {
+                if (contact.name.toLowerCase().includes(searchInput.toLowerCase())) {
+                    contact.visible = true;
+                }  else {
+                    contact.visible = false;
+                }
+            })
+        },
+    
 
         sendMessage: function() {
 
@@ -138,9 +151,9 @@ var app = new Vue({
             
         },
 
-        setActiveIndex: function(index){
-           console.log(index)
-           this.activeIndex = index;
-        },
-    }    
-});
+    setActiveIndex: function (index){
+    console.log(index)
+    this.activeIndex = index;
+    },
+  
+}});
