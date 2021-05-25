@@ -173,6 +173,8 @@
 .contatto h2{
     font-size: 17px;
     display: inline-block;
+    position: absolute;
+    top: 5px;
 }
 
 .contatto p{
@@ -194,6 +196,7 @@
 .contatto img{
     width: 44px;
     border-radius: 50%;
+    display: inline-block;
 }
 
 .chat p{
@@ -265,6 +268,7 @@
     border: none;
     border-radius: 5px;
 }
+
 
 .inserimento i:last-child{
     color: grey;
