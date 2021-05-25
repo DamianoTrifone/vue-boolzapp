@@ -199,9 +199,11 @@
 .chat p{
     font-size: 8px;
     color: grey;
-    margin-left: 80px;
+    margin-left: 140px;
     display: flex;
     align-self: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
 }
 
 .chat{
@@ -223,8 +225,8 @@
     margin-bottom: 20px;
     font-size: 12px;
     border-radius: 5px;  
-    display: flex;
-    align-self: flex-end;
+    /* display: flex;
+    align-self: flex-end; */
     margin-left: 350px;
 }
 
@@ -275,4 +277,3 @@
 .no_display{
     display: none;
 }
-

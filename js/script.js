@@ -38,7 +38,7 @@ var app = new Vue({
             {
                 name: 'Fabio',
                 avatar: '_2',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -60,7 +60,7 @@ var app = new Vue({
             {
                 name: 'Samuele',
                 avatar: '_3',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -82,7 +82,7 @@ var app = new Vue({
             {
                 name: 'Luisa',
                 avatar: '_4',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -100,7 +100,7 @@ var app = new Vue({
         activeIndex: 0,
         active: false,
         userMessage: "",
-        
+
     },
 
     methods: {
@@ -120,6 +120,7 @@ var app = new Vue({
 
          search: function(event) {
              const searchInput = event.target.value;
+             console.log(searchInput);
              return this.contacts.map(contact => {
                 if (contact.name.toLowerCase().includes(searchInput.toLowerCase())) {
                     contact.visible = true;
