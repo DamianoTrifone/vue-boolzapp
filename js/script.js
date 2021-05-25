@@ -98,7 +98,8 @@ var app = new Vue({
             },
         ],
         activeIndex: 0,
-        active: false
+        active: false,
+        userMessage: ""
     },
 
     methods: {
@@ -120,14 +121,14 @@ var app = new Vue({
 
             if (this.userMessage.trim().length > 0) {
                 this.contacts[this.activeIndex].messages.push({
-                    date: this.userData,
+                    date: dayjs().format('DD/MM/YY HH:mm:ss'),
                     text:  this.userMessage,
                     status:  'sent'
                 }),
 
                 setTimeout(() => {
                     this.contacts[this.activeIndex].messages.push({
-                    date: this.userData,
+                    date: dayjs().format('DD/MM/YY HH:mm:ss'),
                     text:  "ok",
                     status:  'received'
                 })
